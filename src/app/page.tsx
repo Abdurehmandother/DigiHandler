@@ -4,6 +4,6 @@ import HelloWorld from "./components/Helloworld";
 export default function Home() {
   return (
    
-      <HelloWorld message="pakistan"/>
+      <HelloWorld message="pakistan Zindabad"/>
   );
 }
