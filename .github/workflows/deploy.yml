@@ -1,0 +1,35 @@
+name: Deploy to Hosting via FTP
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch; change if your default branch is different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Adjust to the Node.js version you’re using
+
+      - run: npm install
+
+      - name: Build and export project
+        run: |
+          npm run build
+          npm run export
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ftp://ftp.yourdomain.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out
+          server-dir: /public_html
