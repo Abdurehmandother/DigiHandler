@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "jsx": "preserve", // Ensure this is set correctly
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "noEmit": true,
     "incremental": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "plugins": [
       {
