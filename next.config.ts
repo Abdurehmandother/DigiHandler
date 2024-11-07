@@ -4,9 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+// // next.config.js
+// module.exports = {
+//   output: 'export',
+// }
+
 // next.config.js
 module.exports = {
-  output: 'export',
-}
+  reactStrictMode: true,
+};
+
 
 export default nextConfig;

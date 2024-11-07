@@ -1,9 +1,9 @@
-import Image from "next/image";
-import HelloWorld from "./components/Helloworld";
+import Navbar from "../app/components/Navbar/Navbar"
+
 
 export default function Home() {
   return (
-   
-      <HelloWorld message="pakistan Zindabad"/>
+    <Navbar />
+      
   );
 }
