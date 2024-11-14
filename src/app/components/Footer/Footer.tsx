@@ -51,7 +51,7 @@ const Footer = () => {
               <Link href="#" color="inherit" sx={{ display: 'block', marginBottom: '8px' }}>
                 Blog
               </Link>
-              <Link href="#" color="inherit" sx={{ display: 'block', marginBottom: '8px' }}>
+              <Link href="/contact" color="inherit" sx={{ display: 'block', marginBottom: '8px' }}>
                 Contact Us
               </Link>
             </Typography>
